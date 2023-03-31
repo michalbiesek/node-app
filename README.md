@@ -3,7 +3,8 @@ Crash instruction
 ```
 docker build -t nodealpine -f Dockerfile .
 docker run -it --rm --name nodetest nodealpine ash
-/usr/src/app # LD_PRELOAD=/usr/lib/appscope/1.3.1/libscope.so node server.js 
+cd /usr/src/app
+LD_PRELOAD=/usr/lib/appscope/1.3.1/libscope.so node server.js 
 Segmentation fault (core dumped)
 ```
 
